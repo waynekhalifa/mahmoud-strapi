@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_layout_navbars",
+  "info": {
+    "displayName": "Navbar"
+  },
+  "options": {},
+  "attributes": {
+    "navbarLogo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.logo"
+    },
+    "navbarLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
+    }
+  }
+}

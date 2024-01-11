@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_form_submissions",
+  "info": {
+    "singularName": "contact-form-submission",
+    "pluralName": "contact-form-submissions",
+    "displayName": "Contact form submission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "subject": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "seen",
+        "ignored",
+        "contacted"
+      ]
+    }
+  }
+}

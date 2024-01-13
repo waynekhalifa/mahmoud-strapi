@@ -140,12 +140,15 @@ export interface SectionsHero extends Schema.Component {
   collectionName: 'components_sections_heroes';
   info: {
     displayName: 'Hero';
+    description: '';
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
     description: Attribute.Text & Attribute.Required;
     picture: Attribute.Media;
     buttons: Attribute.Component<'links.button-link', true>;
+    subTitle: Attribute.String;
+    content: Attribute.Blocks;
   };
 }
 
@@ -178,6 +181,17 @@ export interface SharedQuote extends Schema.Component {
     title: Attribute.String & Attribute.Required;
     body: Attribute.Text & Attribute.Required;
     author: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface SharedRecentPosts extends Schema.Component {
+  collectionName: 'components_shared_recent_posts';
+  info: {
+    displayName: 'recentPosts';
+  };
+  attributes: {
+    active: Attribute.Boolean;
+    numberOfPosts: Attribute.Integer;
   };
 }
 
@@ -252,6 +266,7 @@ declare module '@strapi/types' {
       'shared.map-embed': SharedMapEmbed;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
+      'shared.recent-posts': SharedRecentPosts;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;

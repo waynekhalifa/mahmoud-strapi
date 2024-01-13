@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_recent_posts",
+  "info": {
+    "displayName": "recentPosts"
+  },
+  "options": {},
+  "attributes": {
+    "active": {
+      "type": "boolean"
+    },
+    "numberOfPosts": {
+      "type": "integer"
+    }
+  }
+}

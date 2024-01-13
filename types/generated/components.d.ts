@@ -47,8 +47,6 @@ export interface LayoutFooter extends Schema.Component {
     description: '';
   };
   attributes: {
-    footerLogo: Attribute.Component<'layout.logo'>;
-    menuLinks: Attribute.Component<'links.link', true>;
     socialLinks: Attribute.Component<'links.social-link', true>;
     legalLinks: Attribute.Component<'links.link', true>;
   };
@@ -215,6 +213,17 @@ export interface SharedSlider extends Schema.Component {
   };
 }
 
+export interface SharedText extends Schema.Component {
+  collectionName: 'components_shared_texts';
+  info: {
+    displayName: 'Text';
+    description: '';
+  };
+  attributes: {
+    Text: Attribute.String;
+  };
+}
+
 export interface SharedVideoEmbed extends Schema.Component {
   collectionName: 'components_shared_video_embeds';
   info: {
@@ -246,6 +255,7 @@ declare module '@strapi/types' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.text': SharedText;
       'shared.video-embed': SharedVideoEmbed;
     }
   }

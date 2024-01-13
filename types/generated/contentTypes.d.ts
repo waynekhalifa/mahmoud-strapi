@@ -910,6 +910,7 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     singularName: 'global';
     pluralName: 'globals';
     displayName: 'Global';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -939,7 +940,60 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
           localized: true;
         };
       }>;
-    footer: Attribute.Component<'layout.footer'> &
+    socialLinks: Attribute.Component<'links.social-link', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    aboutMeText: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    aboutMeDescription: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    servicesText: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    servicesList: Attribute.Component<'shared.text', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    latestPostsText: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    recent_posts: Attribute.Relation<
+      'api::global.global',
+      'oneToMany',
+      'api::post.post'
+    >;
+    subcribeText: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    subscribeDescription: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    copyright: Attribute.RichText &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

@@ -6,16 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "footerLogo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "layout.logo"
-    },
-    "menuLinks": {
-      "type": "component",
-      "repeatable": true,
-      "component": "links.link"
-    },
     "socialLinks": {
       "type": "component",
       "repeatable": true,

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "global",
     "pluralName": "globals",
-    "displayName": "Global"
+    "displayName": "Global",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,17 +27,17 @@
       "component": "meta.metadata"
     },
     "favicon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      },
-      "required": true
+      }
     },
     "navbar": {
       "type": "component",
@@ -48,15 +49,87 @@
       },
       "component": "layout.navbar"
     },
-    "footer": {
+    "socialLinks": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "component": "layout.footer"
+      "component": "links.social-link"
+    },
+    "aboutMeText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "aboutMeDescription": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "servicesText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "servicesList": {
+      "displayName": "Text",
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.text"
+    },
+    "latestPostsText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "recent_posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post"
+    },
+    "subcribeText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "subscribeDescription": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "copyright": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }

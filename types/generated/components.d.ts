@@ -144,7 +144,6 @@ export interface SectionsHero extends Schema.Component {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    description: Attribute.Text & Attribute.Required;
     picture: Attribute.Media;
     buttons: Attribute.Component<'links.button-link', true>;
     subTitle: Attribute.String;

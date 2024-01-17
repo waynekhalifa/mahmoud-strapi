@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_sections_contact_infos",
+  "info": {
+    "displayName": "contactInfo"
+  },
+  "options": {},
+  "attributes": {
+    "contactInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.contact-info"
+    }
+  }
+}

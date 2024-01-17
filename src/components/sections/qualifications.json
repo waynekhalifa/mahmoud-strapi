@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_qualifications",
+  "info": {
+    "displayName": "qualifications"
+  },
+  "options": {},
+  "attributes": {
+    "qualificationsSlider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.slider"
+    },
+    "qualificationsHeading": {
+      "type": "string"
+    }
+  }
+}

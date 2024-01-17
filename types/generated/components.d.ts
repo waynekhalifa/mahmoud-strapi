@@ -136,6 +136,28 @@ export interface MetaMetadata extends Schema.Component {
   };
 }
 
+export interface SectionsContactInfo extends Schema.Component {
+  collectionName: 'components_sections_contact_infos';
+  info: {
+    displayName: 'contactInfo';
+  };
+  attributes: {
+    contactInfo: Attribute.Component<'shared.contact-info', true>;
+  };
+}
+
+export interface SectionsContactMe extends Schema.Component {
+  collectionName: 'components_sections_contact_mes';
+  info: {
+    displayName: 'contactMe';
+  };
+  attributes: {
+    contactMeHeading: Attribute.String;
+    contactMeAddress: Attribute.String;
+    contactMeNumber: Attribute.String;
+  };
+}
+
 export interface SectionsHero extends Schema.Component {
   collectionName: 'components_sections_heroes';
   info: {
@@ -151,13 +173,84 @@ export interface SectionsHero extends Schema.Component {
   };
 }
 
+export interface SectionsHowItWorks extends Schema.Component {
+  collectionName: 'components_sections_how_it_works';
+  info: {
+    displayName: 'howItWorks';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.String;
+    content: Attribute.Blocks;
+  };
+}
+
+export interface SectionsMyExperience extends Schema.Component {
+  collectionName: 'components_sections_my_experiences';
+  info: {
+    displayName: 'myExperience';
+  };
+  attributes: {
+    heading: Attribute.String;
+    content: Attribute.Blocks;
+    partners: Attribute.Component<'shared.slider'>;
+  };
+}
+
+export interface SectionsQualifications extends Schema.Component {
+  collectionName: 'components_sections_qualifications';
+  info: {
+    displayName: 'qualifications';
+  };
+  attributes: {
+    qualificationsSlider: Attribute.Component<'shared.slider'>;
+    qualificationsHeading: Attribute.String;
+  };
+}
+
+export interface SectionsServices extends Schema.Component {
+  collectionName: 'components_sections_services';
+  info: {
+    displayName: 'Services';
+  };
+  attributes: {
+    servicesContent: Attribute.Blocks;
+    servicesThumbnail: Attribute.Media;
+  };
+}
+
+export interface SectionsTestimonials extends Schema.Component {
+  collectionName: 'components_sections_testimonials';
+  info: {
+    displayName: 'testimonials';
+    description: '';
+  };
+  attributes: {
+    testimonials: Attribute.Component<'shared.testimonial', true>;
+    testimonialsHeading: Attribute.String;
+  };
+}
+
+export interface SharedContactInfo extends Schema.Component {
+  collectionName: 'components_shared_contact_infos';
+  info: {
+    displayName: 'contactInfo';
+  };
+  attributes: {
+    title: Attribute.String;
+    value: Attribute.Text;
+    icon: Attribute.Media;
+  };
+}
+
 export interface SharedMapEmbed extends Schema.Component {
   collectionName: 'components_shared_map_embeds';
   info: {
     displayName: 'Map embed';
+    description: '';
   };
   attributes: {
-    url: Attribute.String & Attribute.Required;
+    url: Attribute.Text & Attribute.Required;
   };
 }
 
@@ -226,6 +319,17 @@ export interface SharedSlider extends Schema.Component {
   };
 }
 
+export interface SharedTestimonial extends Schema.Component {
+  collectionName: 'components_shared_testimonials';
+  info: {
+    displayName: 'testimonial';
+  };
+  attributes: {
+    content: Attribute.Blocks;
+    author: Attribute.Media;
+  };
+}
+
 export interface SharedText extends Schema.Component {
   collectionName: 'components_shared_texts';
   info: {
@@ -261,7 +365,15 @@ declare module '@strapi/types' {
       'links.link': LinksLink;
       'links.social-link': LinksSocialLink;
       'meta.metadata': MetaMetadata;
+      'sections.contact-info': SectionsContactInfo;
+      'sections.contact-me': SectionsContactMe;
       'sections.hero': SectionsHero;
+      'sections.how-it-works': SectionsHowItWorks;
+      'sections.my-experience': SectionsMyExperience;
+      'sections.qualifications': SectionsQualifications;
+      'sections.services': SectionsServices;
+      'sections.testimonials': SectionsTestimonials;
+      'shared.contact-info': SharedContactInfo;
       'shared.map-embed': SharedMapEmbed;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
@@ -269,6 +381,7 @@ declare module '@strapi/types' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.testimonial': SharedTestimonial;
       'shared.text': SharedText;
       'shared.video-embed': SharedVideoEmbed;
     }

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_services",
+  "info": {
+    "displayName": "Services"
+  },
+  "options": {},
+  "attributes": {
+    "servicesContent": {
+      "type": "blocks"
+    },
+    "servicesThumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

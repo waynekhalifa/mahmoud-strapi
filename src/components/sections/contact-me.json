@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_contact_mes",
+  "info": {
+    "displayName": "contactMe"
+  },
+  "options": {},
+  "attributes": {
+    "contactMeHeading": {
+      "type": "string"
+    },
+    "contactMeAddress": {
+      "type": "string"
+    },
+    "contactMeNumber": {
+      "type": "string"
+    }
+  }
+}

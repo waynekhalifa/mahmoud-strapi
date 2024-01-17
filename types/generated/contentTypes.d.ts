@@ -1120,7 +1120,14 @@ export interface ApiPagePage extends Schema.CollectionType {
         'meta.metadata',
         'elements.feature-column',
         'elements.feature-row',
-        'elements.feature'
+        'elements.feature',
+        'sections.services',
+        'sections.how-it-works',
+        'sections.contact-me',
+        'sections.my-experience',
+        'sections.qualifications',
+        'sections.testimonials',
+        'sections.contact-info'
       ]
     > &
       Attribute.SetPluginOptions<{

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_how_it_works",
+  "info": {
+    "displayName": "howItWorks",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

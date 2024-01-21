@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_qualifcation_items",
+  "info": {
+    "displayName": "qualifcationItem"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

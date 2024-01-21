@@ -201,10 +201,11 @@ export interface SectionsQualifications extends Schema.Component {
   collectionName: 'components_sections_qualifications';
   info: {
     displayName: 'qualifications';
+    description: '';
   };
   attributes: {
-    qualificationsSlider: Attribute.Component<'shared.slider'>;
     qualificationsHeading: Attribute.String;
+    qualificationsItems: Attribute.Component<'shared.qualifcation-item', true>;
   };
 }
 
@@ -261,6 +262,17 @@ export interface SharedMedia extends Schema.Component {
   };
   attributes: {
     file: Attribute.Media;
+  };
+}
+
+export interface SharedQualifcationItem extends Schema.Component {
+  collectionName: 'components_shared_qualifcation_items';
+  info: {
+    displayName: 'qualifcationItem';
+  };
+  attributes: {
+    title: Attribute.String;
+    thumbnail: Attribute.Media;
   };
 }
 
@@ -376,6 +388,7 @@ declare module '@strapi/types' {
       'shared.contact-info': SharedContactInfo;
       'shared.map-embed': SharedMapEmbed;
       'shared.media': SharedMedia;
+      'shared.qualifcation-item': SharedQualifcationItem;
       'shared.quote': SharedQuote;
       'shared.recent-posts': SharedRecentPosts;
       'shared.rich-text': SharedRichText;

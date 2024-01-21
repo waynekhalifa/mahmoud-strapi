@@ -33,14 +33,6 @@
       },
       "type": "string"
     },
-    "description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text"
-    },
     "slug": {
       "pluginOptions": {
         "i18n": {
@@ -92,6 +84,21 @@
         }
       },
       "component": "shared.seo"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

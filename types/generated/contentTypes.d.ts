@@ -1091,12 +1091,6 @@ export interface ApiPagePage extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    description: Attribute.Text &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     slug: Attribute.UID &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1136,6 +1130,12 @@ export interface ApiPagePage extends Schema.CollectionType {
         };
       }>;
     seo: Attribute.Component<'shared.seo'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    thumbnail: Attribute.Media &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

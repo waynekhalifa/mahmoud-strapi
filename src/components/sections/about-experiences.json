@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_sections_about_experiences",
+  "info": {
+    "displayName": "aboutExperiences"
+  },
+  "options": {},
+  "attributes": {
+    "aboutExperiences": {
+      "type": "blocks"
+    }
+  }
+}

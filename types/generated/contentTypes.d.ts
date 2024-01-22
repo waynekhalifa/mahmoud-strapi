@@ -1085,12 +1085,6 @@ export interface ApiPagePage extends Schema.CollectionType {
           localized: true;
         };
       }>;
-    heading: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     slug: Attribute.UID &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -1121,7 +1115,9 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.my-experience',
         'sections.qualifications',
         'sections.testimonials',
-        'sections.contact-info'
+        'sections.contact-info',
+        'sections.about-experiences',
+        'sections.about-hero'
       ]
     > &
       Attribute.SetPluginOptions<{

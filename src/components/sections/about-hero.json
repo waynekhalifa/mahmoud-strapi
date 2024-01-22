@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_about_heroes",
+  "info": {
+    "displayName": "aboutHero"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    },
+    "actionButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.button-link"
+    }
+  }
+}

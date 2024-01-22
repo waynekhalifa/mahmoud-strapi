@@ -136,6 +136,27 @@ export interface MetaMetadata extends Schema.Component {
   };
 }
 
+export interface SectionsAboutExperiences extends Schema.Component {
+  collectionName: 'components_sections_about_experiences';
+  info: {
+    displayName: 'aboutExperiences';
+  };
+  attributes: {
+    aboutExperiences: Attribute.Blocks;
+  };
+}
+
+export interface SectionsAboutHero extends Schema.Component {
+  collectionName: 'components_sections_about_heroes';
+  info: {
+    displayName: 'aboutHero';
+  };
+  attributes: {
+    content: Attribute.Blocks;
+    actionButton: Attribute.Component<'links.button-link'>;
+  };
+}
+
 export interface SectionsContactInfo extends Schema.Component {
   collectionName: 'components_sections_contact_infos';
   info: {
@@ -377,6 +398,8 @@ declare module '@strapi/types' {
       'links.link': LinksLink;
       'links.social-link': LinksSocialLink;
       'meta.metadata': MetaMetadata;
+      'sections.about-experiences': SectionsAboutExperiences;
+      'sections.about-hero': SectionsAboutHero;
       'sections.contact-info': SectionsContactInfo;
       'sections.contact-me': SectionsContactMe;
       'sections.hero': SectionsHero;

@@ -46,7 +46,6 @@
         "shared.map-embed",
         "shared.media",
         "shared.quote",
-        "shared.rich-text",
         "shared.seo",
         "shared.slider",
         "shared.video-embed",
@@ -66,7 +65,8 @@
         "sections.testimonials",
         "sections.contact-info",
         "sections.about-experiences",
-        "sections.about-hero"
+        "sections.about-hero",
+        "shared.richtext"
       ]
     },
     "seo": {

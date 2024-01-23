@@ -86,10 +86,10 @@
         "shared.map-embed",
         "shared.media",
         "shared.quote",
-        "shared.rich-text",
         "shared.seo",
         "shared.slider",
-        "shared.video-embed"
+        "shared.video-embed",
+        "shared.richtext"
       ]
     },
     "seo": {

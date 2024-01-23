@@ -1103,7 +1103,6 @@ export interface ApiPagePage extends Schema.CollectionType {
         'shared.map-embed',
         'shared.media',
         'shared.quote',
-        'shared.rich-text',
         'shared.seo',
         'shared.slider',
         'shared.video-embed',
@@ -1123,7 +1122,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.testimonials',
         'sections.contact-info',
         'sections.about-experiences',
-        'sections.about-hero'
+        'sections.about-hero',
+        'shared.richtext'
       ]
     > &
       Attribute.SetPluginOptions<{
@@ -1225,10 +1225,10 @@ export interface ApiPostPost extends Schema.CollectionType {
         'shared.map-embed',
         'shared.media',
         'shared.quote',
-        'shared.rich-text',
         'shared.seo',
         'shared.slider',
-        'shared.video-embed'
+        'shared.video-embed',
+        'shared.richtext'
       ]
     > &
       Attribute.SetPluginOptions<{

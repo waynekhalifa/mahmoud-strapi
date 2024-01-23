@@ -842,7 +842,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       }>;
     posts: Attribute.Relation<
       'api::category.category',
-      'oneToMany',
+      'manyToMany',
       'api::post.post'
     >;
     createdAt: Attribute.DateTime;
@@ -1201,9 +1201,9 @@ export interface ApiPostPost extends Schema.CollectionType {
       'manyToOne',
       'api::author.author'
     >;
-    category: Attribute.Relation<
+    categories: Attribute.Relation<
       'api::post.post',
-      'manyToOne',
+      'manyToMany',
       'api::category.category'
     >;
     blocks: Attribute.DynamicZone<

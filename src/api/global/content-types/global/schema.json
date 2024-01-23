@@ -140,6 +140,14 @@
         }
       },
       "component": "shared.recent-posts"
+    },
+    "copyRights": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "blocks"
     }
   }
 }

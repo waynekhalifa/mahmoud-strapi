@@ -330,6 +330,16 @@ export interface SharedRichText extends Schema.Component {
   };
 }
 
+export interface SharedRichtext extends Schema.Component {
+  collectionName: 'components_shared_richtexts';
+  info: {
+    displayName: 'richtext';
+  };
+  attributes: {
+    body: Attribute.Blocks;
+  };
+}
+
 export interface SharedSeo extends Schema.Component {
   collectionName: 'components_shared_seos';
   info: {
@@ -415,6 +425,7 @@ declare module '@strapi/types' {
       'shared.quote': SharedQuote;
       'shared.recent-posts': SharedRecentPosts;
       'shared.rich-text': SharedRichText;
+      'shared.richtext': SharedRichtext;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.testimonial': SharedTestimonial;

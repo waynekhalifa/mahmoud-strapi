@@ -1123,7 +1123,10 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.contact-info',
         'sections.about-experiences',
         'sections.about-hero',
-        'shared.richtext'
+        'shared.richtext',
+        'sections.coaching-hero',
+        'sections.coaching-request',
+        'sections.coaching-training'
       ]
     > &
       Attribute.SetPluginOptions<{

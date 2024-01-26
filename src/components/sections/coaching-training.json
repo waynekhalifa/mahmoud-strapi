@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_sections_coaching_trainings",
+  "info": {
+    "displayName": "coachingTraining",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "reasonHeading": {
+      "type": "string"
+    },
+    "reasonDescription": {
+      "type": "blocks"
+    },
+    "audienceHeading": {
+      "type": "string"
+    },
+    "audienceDescription": {
+      "type": "blocks"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.button-link"
+    }
+  }
+}

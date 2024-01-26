@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_coaching_heroes",
+  "info": {
+    "displayName": "coachingHero"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "introduction": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

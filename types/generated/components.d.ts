@@ -157,6 +157,48 @@ export interface SectionsAboutHero extends Schema.Component {
   };
 }
 
+export interface SectionsCoachingHero extends Schema.Component {
+  collectionName: 'components_sections_coaching_heroes';
+  info: {
+    displayName: 'coachingHero';
+  };
+  attributes: {
+    title: Attribute.String;
+    introduction: Attribute.Blocks;
+    description: Attribute.Blocks;
+    thumbnail: Attribute.Media;
+  };
+}
+
+export interface SectionsCoachingRequest extends Schema.Component {
+  collectionName: 'components_sections_coaching_requests';
+  info: {
+    displayName: 'coachingRequest';
+  };
+  attributes: {
+    heading: Attribute.String;
+    description: Attribute.Blocks;
+    button: Attribute.Component<'links.button-link'>;
+  };
+}
+
+export interface SectionsCoachingTraining extends Schema.Component {
+  collectionName: 'components_sections_coaching_trainings';
+  info: {
+    displayName: 'coachingTraining';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Blocks;
+    reasonHeading: Attribute.String;
+    reasonDescription: Attribute.Blocks;
+    audienceHeading: Attribute.String;
+    audienceDescription: Attribute.Blocks;
+    button: Attribute.Component<'links.button-link'>;
+  };
+}
+
 export interface SectionsContactInfo extends Schema.Component {
   collectionName: 'components_sections_contact_infos';
   info: {
@@ -410,6 +452,9 @@ declare module '@strapi/types' {
       'meta.metadata': MetaMetadata;
       'sections.about-experiences': SectionsAboutExperiences;
       'sections.about-hero': SectionsAboutHero;
+      'sections.coaching-hero': SectionsCoachingHero;
+      'sections.coaching-request': SectionsCoachingRequest;
+      'sections.coaching-training': SectionsCoachingTraining;
       'sections.contact-info': SectionsContactInfo;
       'sections.contact-me': SectionsContactMe;
       'sections.hero': SectionsHero;

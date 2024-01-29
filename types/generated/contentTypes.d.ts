@@ -904,6 +904,72 @@ export interface ApiContactFormSubmissionContactFormSubmission
   };
 }
 
+export interface ApiCourseCourse extends Schema.CollectionType {
+  collectionName: 'courses';
+  info: {
+    singularName: 'course';
+    pluralName: 'courses';
+    displayName: 'Course';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    slug: Attribute.UID;
+    thumbnail: Attribute.Media;
+    sections: Attribute.DynamicZone<
+      [
+        'elements.feature-column',
+        'elements.feature-row',
+        'elements.feature',
+        'sections.about-experiences',
+        'sections.about-hero',
+        'sections.coaching-hero',
+        'sections.coaching-request',
+        'sections.coaching-training',
+        'sections.contact-info',
+        'sections.contact-me',
+        'sections.hero',
+        'sections.how-it-works',
+        'sections.my-experience',
+        'sections.qualifications',
+        'sections.services',
+        'sections.testimonials',
+        'shared.contact-info',
+        'shared.map-embed',
+        'shared.media',
+        'shared.qualifcation-item',
+        'shared.quote',
+        'shared.recent-posts',
+        'shared.rich-text',
+        'shared.richtext',
+        'shared.seo',
+        'shared.slider',
+        'shared.testimonial',
+        'shared.text',
+        'shared.video-embed'
+      ]
+    >;
+    seo: Attribute.Component<'shared.seo'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::course.course',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::course.course',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Schema.SingleType {
   collectionName: 'globals';
   info: {
@@ -1360,6 +1426,7 @@ declare module '@strapi/types' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::contact-form-submission.contact-form-submission': ApiContactFormSubmissionContactFormSubmission;
+      'api::course.course': ApiCourseCourse;
       'api::global.global': ApiGlobalGlobal;
       'api::lead-form-submission.lead-form-submission': ApiLeadFormSubmissionLeadFormSubmission;
       'api::page.page': ApiPagePage;

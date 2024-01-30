@@ -1360,7 +1360,21 @@ export interface ApiServiceService extends Schema.CollectionType {
         'shared.slider',
         'shared.testimonial',
         'shared.text',
-        'shared.video-embed'
+        'shared.video-embed',
+        'sections.about-experiences',
+        'sections.about-hero',
+        'sections.coaching-hero',
+        'sections.coaching-request',
+        'sections.coaching-training',
+        'sections.contact-info',
+        'sections.contact-me',
+        'sections.course-modules',
+        'sections.hero',
+        'sections.how-it-works',
+        'sections.my-experience',
+        'sections.qualifications',
+        'sections.services',
+        'sections.testimonials'
       ]
     >;
     seo: Attribute.Component<'shared.seo'>;

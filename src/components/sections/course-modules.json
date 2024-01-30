@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_course_modules",
+  "info": {
+    "displayName": "Course modules"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "modules": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.course-module"
+    }
+  }
+}

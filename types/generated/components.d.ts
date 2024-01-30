@@ -221,6 +221,17 @@ export interface SectionsContactMe extends Schema.Component {
   };
 }
 
+export interface SectionsCourseModules extends Schema.Component {
+  collectionName: 'components_sections_course_modules';
+  info: {
+    displayName: 'Course modules';
+  };
+  attributes: {
+    heading: Attribute.String;
+    modules: Attribute.Component<'shared.course-module', true>;
+  };
+}
+
 export interface SectionsHero extends Schema.Component {
   collectionName: 'components_sections_heroes';
   info: {
@@ -468,6 +479,7 @@ declare module '@strapi/types' {
       'sections.coaching-training': SectionsCoachingTraining;
       'sections.contact-info': SectionsContactInfo;
       'sections.contact-me': SectionsContactMe;
+      'sections.course-modules': SectionsCourseModules;
       'sections.hero': SectionsHero;
       'sections.how-it-works': SectionsHowItWorks;
       'sections.my-experience': SectionsMyExperience;

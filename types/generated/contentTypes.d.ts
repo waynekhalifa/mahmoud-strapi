@@ -910,6 +910,7 @@ export interface ApiCourseCourse extends Schema.CollectionType {
     singularName: 'course';
     pluralName: 'courses';
     displayName: 'Course';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -948,7 +949,8 @@ export interface ApiCourseCourse extends Schema.CollectionType {
         'shared.slider',
         'shared.testimonial',
         'shared.text',
-        'shared.video-embed'
+        'shared.video-embed',
+        'sections.course-modules'
       ]
     >;
     seo: Attribute.Component<'shared.seo'>;

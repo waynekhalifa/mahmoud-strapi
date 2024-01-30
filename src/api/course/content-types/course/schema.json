@@ -4,7 +4,8 @@
   "info": {
     "singularName": "course",
     "pluralName": "courses",
-    "displayName": "Course"
+    "displayName": "Course",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,14 +19,15 @@
       "type": "uid"
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "sections": {
       "type": "dynamiczone",
@@ -58,7 +60,8 @@
         "shared.slider",
         "shared.testimonial",
         "shared.text",
-        "shared.video-embed"
+        "shared.video-embed",
+        "sections.course-modules"
       ]
     },
     "seo": {

@@ -307,6 +307,17 @@ export interface SharedContactInfo extends Schema.Component {
   };
 }
 
+export interface SharedCourseModule extends Schema.Component {
+  collectionName: 'components_shared_course_modules';
+  info: {
+    displayName: 'Course module';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.String;
+  };
+}
+
 export interface SharedMapEmbed extends Schema.Component {
   collectionName: 'components_shared_map_embeds';
   info: {
@@ -464,6 +475,7 @@ declare module '@strapi/types' {
       'sections.services': SectionsServices;
       'sections.testimonials': SectionsTestimonials;
       'shared.contact-info': SharedContactInfo;
+      'shared.course-module': SharedCourseModule;
       'shared.map-embed': SharedMapEmbed;
       'shared.media': SharedMedia;
       'shared.qualifcation-item': SharedQualifcationItem;

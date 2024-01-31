@@ -972,6 +972,36 @@ export interface ApiCourseCourse extends Schema.CollectionType {
   };
 }
 
+export interface ApiFaviconFavicon extends Schema.SingleType {
+  collectionName: 'favicons';
+  info: {
+    singularName: 'favicon';
+    pluralName: 'favicons';
+    displayName: 'Favicon';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    icon: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::favicon.favicon',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::favicon.favicon',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Schema.SingleType {
   collectionName: 'globals';
   info: {
@@ -1443,6 +1473,7 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory;
       'api::contact-form-submission.contact-form-submission': ApiContactFormSubmissionContactFormSubmission;
       'api::course.course': ApiCourseCourse;
+      'api::favicon.favicon': ApiFaviconFavicon;
       'api::global.global': ApiGlobalGlobal;
       'api::lead-form-submission.lead-form-submission': ApiLeadFormSubmissionLeadFormSubmission;
       'api::page.page': ApiPagePage;
